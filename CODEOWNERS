@@ -2,5 +2,5 @@
 
 * @RapidCircle/poc-coe
 
-/Application.Zones @poc-partner 
-/Platform.Core @poc-partner
+/Application.Zones @RapidCircle/poc-partner 
+/Platform.* @RapidCircle/poc-partner
