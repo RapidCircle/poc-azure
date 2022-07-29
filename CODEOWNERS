@@ -3,4 +3,4 @@
 * @RapidCircle/poc-coe
 
 /Application.Zones @poc-partner 
-/Platform.* @poc-partner
+/Platform.Core @poc-partner
