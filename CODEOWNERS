@@ -1,3 +1,8 @@
 # Adding code approver as poc-coe
 
 * @RapidCircle/poc-coe
+
+
+/Application.Zones @RapidCircle/poc-partner 
+/Platform.* @RapidCircle/poc-partner
+
