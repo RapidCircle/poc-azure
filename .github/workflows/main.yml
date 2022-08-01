@@ -30,6 +30,11 @@ jobs:
           fi
           echo "C_ENV is $C_ENV"
         shell: bash
+
+      - name: "echo C_ENV"
+        run: |
+          echo "C_ENV is $C_ENV"
+        shell: bash
   # This workflow contains a single job called "build"
   dev-tst:
     if: github.ref_name == 'main'
