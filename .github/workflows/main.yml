@@ -16,18 +16,19 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallelxxx
 jobs:
   compute-environment:
-    - name: "Compute Environment"
-      run: |
-        if contains(github.ref, 'feature/')
-        then
-          echo "Branch is main"
-          echo "C_ENV=bus" >> $GITHUB_ENV
-        else
-          echo "Use FOO workflow secret input: ${{ inputs.FOO }}"
-          echo "C_ENV=dev-tst" >> $GITHUB_ENV
-        fi
-        echo "C_ENV is $C_ENV"
-      shell: bash
+    steps:
+      - name: "Compute Environment"
+        run: |
+          if contains(github.ref, 'feature/')
+          then
+            echo "Branch is feature"
+            echo "C_ENV=bus" >> $GITHUB_ENV
+          else
+            echo "Branch is NOT from feature"
+            echo "C_ENV=dev-tst" >> $GITHUB_ENV
+          fi
+          echo "C_ENV is $C_ENV"
+        shell: bash
   # This workflow contains a single job called "build"
   dev-tst:
     if: github.ref_name == 'main'
