@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: "Compute Environment"
         run: |
-          if contains(github.ref, 'feature/')
+          if [[ ${{github.ref}} == *"/feature/"* ]];
           then
             echo "Branch is feature"
             echo "C_ENV=bus" >> $GITHUB_ENV
